@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        
+    </ul>
+    <input type="text" placeholder="items">
+    <button id="bt1">submit</button>
+    <button id="bt2">Remove</button>
+    <button id="bt3">Clear</button>
+    <script>
+        var int=document.querySelector("input");
+        var list=document.querySelector("ul");
+        var submit=document.querySelector("#bt1");
+        var rem=document.querySelector("#bt2");
+        var clr=document.querySelector("#bt3")
+        let body=document.querySelector("body");
+        body.style.backgroundColor="red";
+        var le;
+    submit.addEventListener("click",function(){
+        le=document.createElement("li")
+        
+        if(int.value==""){}
+        else{
+            list.append(le);
+            le.textContent=int.value;
+            int.value="";
+            
+        }
+    })
+    rem.addEventListener("click",function(){
+        list.removeChild(le);
+    })
+    clr.addEventListener("click",function(){
+        list.remove();
+    })
+    
+   
+    </script>
+</body>
+</html>
